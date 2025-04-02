@@ -1,0 +1,21 @@
+# 忽略数据文件夹
+data/
+
+# 忽略 Cursor IDE 的配置文件
+.cursor/
+
+# 忽略日志文件夹
+logs/
+
+# 忽略保存的模型文件
+save_file/
+
+# 忽略 Windows 相关的临时文件
+Thumbs.db
+desktop.ini
+
+# 忽略 VSCode 可能生成的文件（如果使用）
+.vscode/
+
+# 忽略 Python 缓存文件
+__pycache__/

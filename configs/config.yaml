@@ -1,0 +1,40 @@
+# 模型配置
+model:
+  name: "AutoEncoder"
+  input_dim: 784  # MNIST图像维度
+  hidden_dims: [500, 500, 2000, 10]  # 编码器层维度
+  latent_dim: 10  # 潜在空间维度
+  n_clusters: 10  # 聚类数量
+
+# 训练参数
+training:
+  batch_size: 256
+  epochs: 500
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 10
+  pretrain_epochs: 250
+  update_interval: 36  # 更新聚类分配的间隔
+
+# 数据处理参数
+data:
+  train_batch_size: 256
+  test_batch_size: 1000
+  num_workers: 4
+  pin_memory: true
+
+# 随机种子设置
+seed: 42
+
+# 文件路径配置
+paths:
+  data_dir: "./data"
+  save_dir: "./save_file"
+  log_dir: "./logs"
+  experiment_dir: "./experiments"
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "training.log" 
